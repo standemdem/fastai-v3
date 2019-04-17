@@ -5,6 +5,9 @@ body {
 .no-display {
     display: none;
 }
+ul, li {
+    list-style-type: none;
+}
 
 .center {
     margin: auto;
