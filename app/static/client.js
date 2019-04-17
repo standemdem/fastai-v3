@@ -24,14 +24,8 @@ function analyze() {
     xhr.onload = function(e) {
         if (this.readyState === 4) {
             var response = JSON.parse(e.target.responseText);
-            //el('result-label').innerHTML = `Result = ${response['result']}`;
-            el('result-label').innerHTML = `<div class="result-style">
-                                                <div>
-                                                    <span class="imagenet">${response['pred_1']}</span>
-                                                    <br /><span style='font-size: 0.9em'>${response['pred_2']} - ${response['pred_3']}</span>
-                                                </div>
-                                            </div>`;
-        }
+            el('result-label').innerHTML = `Result = ${response['result']}`;
+           
         el('analyze-button').innerHTML = 'Analyze';
     }
 
